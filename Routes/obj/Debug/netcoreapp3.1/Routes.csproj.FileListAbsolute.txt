@@ -1,0 +1,9 @@
+C:\AnalyticsWebapps\Routes\bin\Debug\netcoreapp3.1\Routes.deps.json
+C:\AnalyticsWebapps\Routes\bin\Debug\netcoreapp3.1\Routes.dll
+C:\AnalyticsWebapps\Routes\bin\Debug\netcoreapp3.1\Routes.pdb
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.csprojAssemblyReference.cache
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.AssemblyInfoInputs.cache
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.AssemblyInfo.cs
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.csproj.CoreCompileInputs.cache
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.dll
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.pdb

@@ -1,0 +1,15 @@
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Database.deps.json
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Database.runtimeconfig.json
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Database.runtimeconfig.dev.json
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Database.dll
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Database.pdb
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Models.dll
+C:\AnalyticsWebapps\Database\bin\Debug\netcoreapp3.1\Models.pdb
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.csprojAssemblyReference.cache
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfoInputs.cache
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfo.cs
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.csproj.CoreCompileInputs.cache
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.csproj.CopyComplete
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.dll
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.pdb
+C:\AnalyticsWebapps\Database\obj\Debug\netcoreapp3.1\Database.genruntimeconfig.cache
