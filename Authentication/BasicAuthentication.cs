@@ -43,7 +43,7 @@ namespace Authentication
             if (result.Succeeded)
             {
                 this.logger.LogInformation($"User {appUser.UserName} created");
-                this.GenerateConfirmationEmail(appUser);
+                await this.GenerateConfirmationEmail(appUser);
                 return;
             }
 

@@ -7,3 +7,11 @@ C:\AnalyticsWebapps\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs
 C:\AnalyticsWebapps\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CoreCompileInputs.cache
 C:\AnalyticsWebapps\Utils\obj\Debug\netcoreapp3.1\Utils.dll
 C:\AnalyticsWebapps\Utils\obj\Debug\netcoreapp3.1\Utils.pdb
+C:\src\Utils\obj\Debug\netcoreapp3.1\Utils.dll
+C:\src\Utils\obj\Debug\netcoreapp3.1\Utils.pdb
+C:\src\Utils\bin\Debug\netcoreapp3.1\Utils.deps.json
+C:\src\Utils\bin\Debug\netcoreapp3.1\Utils.dll
+C:\src\Utils\bin\Debug\netcoreapp3.1\Utils.pdb
+C:\src\Utils\obj\Debug\netcoreapp3.1\Utils.csprojAssemblyReference.cache
+C:\src\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfoInputs.cache
+C:\src\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs

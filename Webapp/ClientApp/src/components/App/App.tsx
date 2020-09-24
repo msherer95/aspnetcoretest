@@ -34,7 +34,8 @@ function App() {
         </a>
       </header>
 	<MyList list={list} />
-	<button onClick={addToList}>Add List</button>
+	<MyList list={list} />
+	<button onClick={addToList}>Add List Here</button>
     </div>
   );
 }

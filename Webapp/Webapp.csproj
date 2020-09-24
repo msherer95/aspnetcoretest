@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
@@ -7,10 +7,11 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <UserSecretsId>6cf47cfc1033b43966421f1d3a3b73d3</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.6" />
@@ -23,40 +24,34 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
   </ItemGroup>
-
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
     <None Include="ClientApp\package.json" />
     <None Include="ClientApp\public\manifest.json" />
     <None Include="ClientApp\tsconfig.json" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Authentication\Authentication.csproj" />
     <ProjectReference Include="..\Database\Database.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="ClientApp\src\interfaces\" />
     <Folder Include="ClientApp\src\api\" />
     <Folder Include="ClientApp\src\utils\" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Startup.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="GeneratedTemplates\ApplicationRole.d.ts">
       <CustomToolNamespace>..\Models\ApplicationRole.cs</CustomToolNamespace>
@@ -80,20 +75,18 @@
       <CustomToolNamespace>..\Models\TestModel2.cs</CustomToolNamespace>
     </None>
   </ItemGroup>
-
-   <Target Name="ConcatTypeDefinitions" BeforeTargets="Build">
-	   <ItemGroup>
-		   <ConcatFiles Include="GeneratedTemplates\*.d.ts" />
-	   </ItemGroup>
-	   <ItemGroup>
-		   <ContentLines Include="%0a$([System.IO.File]::ReadAllText(%(ConcatFiles.Identity)))%0a" />
-		   <FileContent Include="declare namespace Webapp {" />
-		   <FileContent Include="@(ContentLines, '')" />
-		   <FileContent Include="}" />
-	   </ItemGroup>
-	   <WriteLinesToFile File="ClientApp\src\interfaces\Webapp.d.ts" Lines="@(FileContent)" Overwrite="true" />
-   </Target>
-	
+  <Target Name="ConcatTypeDefinitions" BeforeTargets="Build">
+    <ItemGroup>
+      <ConcatFiles Include="GeneratedTemplates\*.d.ts" />
+    </ItemGroup>
+    <ItemGroup>
+      <ContentLines Include="%0a$([System.IO.File]::ReadAllText(%(ConcatFiles.Identity)))%0a" />
+      <FileContent Include="declare namespace Webapp {" />
+      <FileContent Include="@(ContentLines, '')" />
+      <FileContent Include="}" />
+    </ItemGroup>
+    <WriteLinesToFile File="ClientApp\src\interfaces\Webapp.d.ts" Lines="@(FileContent)" Overwrite="true" />
+  </Target>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
@@ -103,21 +96,18 @@
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
   </Target>
-
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
-
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)build\**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
-
 </Project>

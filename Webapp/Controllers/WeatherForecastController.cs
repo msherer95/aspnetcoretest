@@ -34,7 +34,7 @@ namespace Webapp.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<WeatherForecastModel>> Get()
+        public IEnumerable<WeatherForecastModel> Get()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecastModel

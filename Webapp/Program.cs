@@ -22,9 +22,7 @@ namespace Webapp
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-                    //.UseKestrel()
-                    //.UseIISIntegration()
-                    .UseStartup<Startup>();
+                        .UseStartup<Startup>();
                 });
     }
 }

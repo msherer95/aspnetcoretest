@@ -16,6 +16,7 @@
           "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": "3.1.6",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.6",
+          "Microsoft.AspNetCore.Authentication.Negotiate": "3.1.7",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.UI": "3.1.6",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
@@ -276,6 +277,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Negotiate/3.1.7": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Negotiate.dll": {
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37213"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.0.0-preview9.19424.4": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
@@ -284,6 +296,18 @@
           "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.19.42404"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
+          "System.IO.Pipelines": "4.7.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37213"
           }
         }
       },
@@ -329,7 +353,7 @@
       },
       "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
         }
       },
@@ -344,7 +368,7 @@
       },
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "System.Text.Encodings.Web": "4.5.0"
         }
       },
@@ -356,9 +380,16 @@
           "System.Buffers": "4.5.0"
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/3.1.7": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "3.1.7",
+          "System.IO.Pipelines": "4.7.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37213"
+          }
         }
       },
       "Microsoft.AspNetCore.Identity/2.2.0": {
@@ -521,7 +552,7 @@
       },
       "Microsoft.Extensions.Caching.Abstractions/3.1.6": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {
@@ -557,7 +588,7 @@
       },
       "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {
@@ -615,7 +646,7 @@
       },
       "Microsoft.Extensions.FileProviders.Abstractions/3.1.6": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll": {
@@ -715,7 +746,7 @@
       "Microsoft.Extensions.Options/3.1.6": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Primitives": "3.1.6"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {
@@ -724,11 +755,11 @@
           }
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.6": {
+      "Microsoft.Extensions.Primitives/3.1.7": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "3.1.6.0",
-            "fileVersion": "3.100.620.31605"
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37108"
           }
         }
       },
@@ -816,7 +847,7 @@
       },
       "Microsoft.Net.Http.Headers/2.2.0": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.Buffers": "4.5.0"
         }
       },
@@ -1571,6 +1602,14 @@
           "lib/netstandard2.0/System.IO.Packaging.dll": {
             "assemblyVersion": "4.0.5.0",
             "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "System.IO.Pipelines/4.7.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "4.0.2.1",
+            "fileVersion": "4.700.20.12001"
           }
         }
       },
@@ -2517,12 +2556,26 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.6",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication.Negotiate/3.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OZb+u/qlXV3e1QyIkrJjcUqpXO9GD9nKeI69SPRXTydQYOXJSjVMUIH8QZZBLjesb9Jqdsagi3tjtEA1WmWTzg==",
+      "path": "microsoft.aspnetcore.authentication.negotiate/3.1.7",
+      "hashPath": "microsoft.aspnetcore.authentication.negotiate.3.1.7.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authentication.OpenIdConnect/3.0.0-preview9.19424.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-HYmZNYuS9Kt9ZAKOvffcjacrX23oY6bBSsv6dY5UzH6Qmmkl8RhMs1/2WQYxoVhYo0TaVx/1U5J2Jdr+aY2vzw==",
       "path": "microsoft.aspnetcore.authentication.openidconnect/3.0.0-preview9.19424.4",
       "hashPath": "microsoft.aspnetcore.authentication.openidconnect.3.0.0-preview9.19424.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gtsi0mok+xtGQjJoyJDmzk98pgGzf0tLTEUCnNgeNHP4+0js1DKFtqfILL2IGwgtCLvdEJz4asj7hhpAMgpJNw==",
+      "path": "microsoft.aspnetcore.connections.abstractions/3.1.7",
+      "hashPath": "microsoft.aspnetcore.connections.abstractions.3.1.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.6": {
       "type": "package",
@@ -2587,12 +2640,12 @@
       "path": "microsoft.aspnetcore.http.extensions/2.2.0",
       "hashPath": "microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+    "Microsoft.AspNetCore.Http.Features/3.1.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+      "sha512": "sha512-gOIh/ATcFrVvFxQK1CvfeIla4bOVHnXIhzImQrBvFVtemNIoMy7kD4d+/U/4833nhAU0t8JjNS3lG9DCywOnfQ==",
+      "path": "microsoft.aspnetcore.http.features/3.1.7",
+      "hashPath": "microsoft.aspnetcore.http.features.3.1.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Identity/2.2.0": {
       "type": "package",
@@ -2853,12 +2906,12 @@
       "path": "microsoft.extensions.options/3.1.6",
       "hashPath": "microsoft.extensions.options.3.1.6.nupkg.sha512"
     },
-    "Microsoft.Extensions.Primitives/3.1.6": {
+    "Microsoft.Extensions.Primitives/3.1.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X+h3tO383iMbtFxYp6Al4pgBzbfQKJY8/gd4U7+sZy90XeSfnw5SwHyCiRrAePG6kee4zCGsvQHPCqaTZ876hw==",
-      "path": "microsoft.extensions.primitives/3.1.6",
-      "hashPath": "microsoft.extensions.primitives.3.1.6.nupkg.sha512"
+      "sha512": "sha512-sa17s3vDAXTuIVGxuJcK713i0B0iaUoiwY4Sl2SLHhMqM8snznn0YVGiZAVkoKEUFWjvIg1Z/JNmAicBamI4mg==",
+      "path": "microsoft.extensions.primitives/3.1.7",
+      "hashPath": "microsoft.extensions.primitives.3.1.7.nupkg.sha512"
     },
     "Microsoft.Extensions.WebEncoders/2.2.0": {
       "type": "package",
@@ -3454,6 +3507,13 @@
       "sha512": "sha512-9VV4KAbgRQZ79iEoG40KIeZy38O30oWwewScAST879+oki8g/Wa2HXZQgrhDDxQM4GkP1PnRJll05NMiVPbYAw==",
       "path": "system.io.packaging/4.7.0",
       "hashPath": "system.io.packaging.4.7.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+      "path": "system.io.pipelines/4.7.1",
+      "hashPath": "system.io.pipelines.4.7.1.nupkg.sha512"
     },
     "System.IO.Pipes.AccessControl/4.5.1": {
       "type": "package",
