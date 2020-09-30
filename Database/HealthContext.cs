@@ -7,28 +7,17 @@ namespace AnalyticsWebapps.Database
 {
     public partial class HealthContext : DbContext
     {
-        private IConfiguration configuration;
-        public HealthContext(DbContextOptions<HealthContext> options, IConfiguration configuration)
-        {
-            this.configuration = configuration;
-        }
+        public HealthContext(DbContextOptions<HealthContext> options) : base(options)
+        { }
+        
 
         public virtual DbSet<DrugInformation> DrugInformation { get; set; }
         public virtual DbSet<SyndromicEvents> SyndromicEvents { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(this.configuration.GetConnectionString("Health"));
-            }
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DrugInformation>(entity =>
             {
-                entity.HasNoKey();
 
                 entity.Property(e => e.DrugName)
                     .HasMaxLength(255)
@@ -41,7 +30,6 @@ namespace AnalyticsWebapps.Database
 
             modelBuilder.Entity<SyndromicEvents>(entity =>
             {
-                entity.HasNoKey();
 
                 entity.ToTable("syndromic_events");
 
@@ -88,6 +76,17 @@ namespace AnalyticsWebapps.Database
 
                 entity.Property(e => e.ZipCode).HasColumnName("zip_code");
             });
+
+            modelBuilder.Entity<SyndromicEvents>()
+                .HasKey(c => c.Gender);
+
+            modelBuilder.Entity<DrugInformation>()
+                .HasKey(c => c.DrugName);
+
+            modelBuilder.Entity<DrugInformation>()
+                .HasOne(c => c.SyndromicEvents)
+                .WithMany(c => c.DrugInformation)
+                .HasForeignKey(c => c.DrugName);
 
             OnModelCreatingPartial(modelBuilder);
         }

@@ -14,3 +14,4 @@ C:\src\Routes\obj\Debug\netcoreapp3.1\Routes.AssemblyInfoInputs.cache
 C:\src\Routes\obj\Debug\netcoreapp3.1\Routes.AssemblyInfo.cs
 C:\src\Routes\obj\Debug\netcoreapp3.1\Routes.dll
 C:\src\Routes\obj\Debug\netcoreapp3.1\Routes.pdb
+C:\AnalyticsWebapps\Routes\obj\Debug\netcoreapp3.1\Routes.csprojAssemblyReference.cache

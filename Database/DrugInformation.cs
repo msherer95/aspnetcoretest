@@ -7,5 +7,7 @@ namespace AnalyticsWebapps.Database
     {
         public string FullText { get; set; }
         public string DrugName { get; set; }
+
+        public SyndromicEvents SyndromicEvents { get; set; }
     }
 }

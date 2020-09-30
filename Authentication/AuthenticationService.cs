@@ -93,20 +93,6 @@ namespace Authentication
                         ValidateLifetime = true,
                         ClockSkew = TimeSpan.Zero
                     };
-
-                    options.Events = new JwtBearerEvents()
-                    {
-                        OnMessageReceived = async context =>
-                        {
-                            string token = context.Request.Headers["Bearer"];
-                            if (!token.IsNullOrEmpty())
-                            {
-                                context.Token = token;
-                            }
-
-                            await Task.CompletedTask;
-                        }
-                    };
                 })
                 .AddIdentityServerJwt();
 

@@ -17,5 +17,7 @@ namespace AnalyticsWebapps.Database
         public bool? IsForeign { get; set; }
         public bool? Red { get; set; }
         public int Id { get; set; }
+
+        public List<DrugInformation> DrugInformation { get; set; }
     }
 }
